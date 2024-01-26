@@ -1,0 +1,87 @@
+@import "@/styles/_breakpoints.scss";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  user-select: none;
+  margin-top: 40px;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: $media-tablet) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+}
+.navbar{
+  & > ul {
+    display: flex;
+    gap: 24px;
+    @media screen and (max-width: $media-tablet) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  .navbar_link{
+    color: #828282;
+    font-weight: 600;
+    transition: all .2s ease;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  gap: 8px;
+  transition: all .2s ease;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.logo_img {
+
+}
+
+.logo_text {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 1;
+  color: #828282;
+}
+
+.socials {
+  display: flex;
+  gap: 24px;
+  @media screen and (max-width: $media-tablet) {
+    margin: 20px 0;
+  }
+}
+
+.socials_item {
+  transition: all .2s ease;
+  &:hover {
+    opacity: .5;
+  }
+}
+
+.divider {
+  display: flex;
+  min-height: 1px;
+  background-color: #828282;
+}
+
+.copyright,
+.muted_text {
+  font-size: 14px;
+  color: #828282;
+}

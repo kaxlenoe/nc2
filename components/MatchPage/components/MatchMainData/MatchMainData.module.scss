@@ -1,0 +1,267 @@
+@import "@/styles/_colors.scss";
+@import "@/styles/_breakpoints.scss";
+
+.wrapper {
+  min-height: 240px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 20px;
+  background: linear-gradient(0deg, #0f1515 35.95%, #141d1d 95.72%);
+  border-radius: 12px;
+  position: relative;
+  user-select: none;
+  @media (max-width: $media-tablet) {
+    padding: 12px;
+    justify-content: space-around;
+    margin-bottom: 0;
+  }
+}
+
+.layout {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  @media (max-width: $media-tablet) {
+    margin-bottom: 20px;
+  }
+}
+
+.layout_left,
+.layout_middle,
+.layout_right {
+  position: relative;
+  flex-basis: calc((100% - 16px) / 3);
+  min-width: calc((100% - 16px) / 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.layout_left {
+  @media (max-width: $media-tablet) {
+    flex-basis: 40%;
+    min-width: 40%;
+  }
+}
+.layout_middle {
+  gap: 20px;
+  @media (max-width: $media-tablet) {
+    flex-basis: 20%;
+    min-width: 10%;
+    justify-content: flex-end;
+    margin-bottom: 24px;
+  }
+}
+
+.layout_right {
+  @media (max-width: $media-tablet) {
+    flex-basis: 40%;
+    min-width: 40%;
+  }
+}
+
+.teams_bg {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  height: 50%;
+  opacity: .03;
+}
+
+.teams_bg_home,
+.teams_bg_away {
+  object-fit: contain;
+}
+
+.teams_bg_home {
+  padding-left: 20px;
+}
+
+.teams_bg_away {
+  padding-right: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.header_league {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.header_league_logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.header_league_text {
+  font-size: 18px;
+  font-weight: 600;
+  @media (max-width: $media-sm) {
+    font-size: 14px;
+  }
+}
+
+.header_bestof_text {
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 2px 6px;
+  @media (max-width: $media-sm) {
+    font-size: 12px;
+  }
+}
+
+.header_text_divider {
+  font-size: 16px;
+}
+
+.team_logo_wrapper {
+  min-width: 60px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  @media (max-width: $media-sm) {
+    min-width: 40px;
+    min-height: 40px;
+  }
+}
+
+.team_logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  @media (max-width: $media-sm) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.team_name {
+  display: block;
+  text-align: center;
+  max-width: 100%;
+  font-size: 28px;
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @media (max-width: $media-tablet) {
+    font-size: 16px;
+  }
+}
+.countdown{
+  @media (max-width: $media-tablet) {
+    display: none;
+  }
+}
+
+.best_odd {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  @media (max-width: $media-tablet) {
+   flex-direction: column-reverse;
+  }
+  &:hover > .best_odd_value {
+    background-color: #298c8c;
+  }
+}
+
+.best_odd_logo_wrapper {
+  max-width: 75px;
+  min-height: 40px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  @media (max-width: $media-tablet) {
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 6px;
+  }
+}
+
+.best_odd_logo {
+  max-width: 75px;
+  min-height: 40px;
+}
+
+.best_odd_value {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  background-color: #3b4040;
+  font-weight: 600;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  transition: .2s ease-in-out;
+  @media (max-width: $media-tablet) {
+    min-height: 40px;
+    width: 75px;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 6px;
+  }
+}
+
+.live_badge {
+  position: relative;
+  background-color: #121f21;
+  padding: 6px 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    margin-right: 8px;
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: $secondary-tint4;
+    border-radius: 50%;
+  }
+}
+
+.date_string {
+  font-size: 12px;
+  font-weight: 200;
+  letter-spacing: 0.05em;
+  @media (max-width: $media-sm) {
+    font-size: 8px;
+  }
+}
+
+.date_time {
+  font-weight: 700;
+  font-size: 20px;
+  @media (max-width: $media-sm) {
+    font-size: 12px;
+  }
+}
+
+.score {
+  display: flex;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 32px;
+}

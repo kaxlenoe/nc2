@@ -1,0 +1,52 @@
+@import "@/styles/_colors.scss";
+
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: auto;
+  width: 100vw;
+  display: flex;
+  align-items: flex-start;
+  transition: .2s ease;
+  background: #0F1515;
+  padding: 16px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  overflow: hidden;
+
+  .Link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .iconImage{
+    filter: invert(100%) sepia(69%) saturate(0%) hue-rotate(170deg) brightness(200%) contrast(105%);
+  }
+  .active{
+    filter: unset;
+    color: #17BEBB;
+  }
+  ul {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    //z-index: 5;
+
+    li {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 11px;
+    }
+  }
+}

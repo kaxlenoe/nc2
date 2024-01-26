@@ -1,0 +1,5 @@
+export enum MATCH_STATUSES {
+    UPCOMING = 'UPCOMING',
+    RUNNING = 'RUNNING',
+    PAST = 'PAST'
+}

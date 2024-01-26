@@ -1,0 +1,177 @@
+@import "@/styles/_breakpoints.scss";
+
+.wrapper {
+  background-color: #0F1515;
+  border-radius: 12px;
+  z-index: 1;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  &:hover{
+    background-color: #1b2525;
+  }
+  &:hover > .footer {
+    background-color: #263434;
+  }
+}
+
+.header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px 20px 0;
+}
+.game_icon{
+}
+.match_info {
+  margin-top: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @media screen and (max-width: $media-tablet) {
+    font-size: 12px;
+  }
+}
+
+.card_body {
+  padding: 0 20px;
+}
+
+.teams {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.team_name {
+  font-size: 20px;
+  font-weight: 700;
+  @media screen and (max-width: $media-tablet) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #141D1D;
+  padding: 0px 20px 20px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  transition: .2s ease-in-out;
+}
+
+.footer_text {
+  margin: 16px 0 20px;
+  color: #FCFDFB;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  @media screen and (max-width: $media-tablet) {
+    font-size: 12px;
+  }
+}
+
+.footer_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  @media screen and (max-width: $media-tablet) {
+    //flex-direction: column;
+    align-items: flex-end;
+    //gap:20px;
+  }
+}
+
+.footer_pick {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  @media screen and (max-width: $media-tablet) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.footer_pick_type {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(252, 253, 251, 0.30);
+}
+
+.footer_pick_team {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer_pick_team_name {
+  font-weight: 600;
+  @media screen and (max-width: $media-tablet) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.footer_bet {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 0px;
+  bottom: 0px;
+  z-index: 99;
+  cursor: pointer;
+  &:hover > .footer_bet_value {
+    background-color: #298c8c;
+  }
+  @media screen and (max-width: $media-tablet) {
+  }
+}
+.footer_bet_logo {
+  object-fit: contain;
+}
+.footer_bet_diff {
+  margin-right: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #53e300;
+  @media screen and (max-width: $media-tablet) {
+    //order:3;
+    //margin-right: 0;
+    //margin-left: 8px;
+  }
+}
+.footer_bet_logo_wrapper {
+  display: flex;
+  min-height: 36px;
+  align-items: center;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  @media screen and (max-width: $media-tablet) {
+    //order:1;
+  }
+}
+
+.footer_bet_value {
+  padding: 6px 12px;
+  background-color: #3B4040;
+  font-weight: 600;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  transition: .2s ease-in-out;
+  @media screen and (max-width: $media-tablet) {
+    //order:2;
+  }
+}
+

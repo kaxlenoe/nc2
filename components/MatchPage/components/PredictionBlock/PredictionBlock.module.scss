@@ -1,0 +1,91 @@
+.wrapper {
+  display: flex;
+  padding: 16px;
+  border-radius: 12px;
+  user-select: none;
+  background: var(
+                  --Linear-card,
+                  linear-gradient(131deg, #0f1515 35.95%, #141d1d 95.72%)
+  );
+}
+
+.probs {
+  display: flex;
+  flex-grow: 1;
+}
+
+.probA,
+.probB,
+.probTie {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  :global {
+    .percentage {
+      font-weight: 600;
+    }
+  }
+}
+
+.probA {
+}
+
+.probB {
+  :global {
+    .percentage {
+      align-self: flex-end;
+    }
+  }
+}
+
+.probTie {
+  :global {
+    .percentage {
+      align-self: center;
+    }
+  }
+}
+
+.chartWin,
+.chartLose,
+.chartTie {
+  height: 6px;
+  border-radius: 6px;
+}
+
+.chartWin {
+  background: linear-gradient(90deg, #396794 0%, #70d1dc 100%);
+  box-shadow: 0px 0px 10px 0px rgba(100, 224, 241, 0.3);
+
+}
+
+.chartLose {
+  background: linear-gradient(90deg, #8a959d 0%, #636a6c 100%);
+  //box-shadow: 0px 0px 10px 0px rgba(75, 79, 82, 0.3);
+}
+
+.chartTie {
+  background: linear-gradient(90deg, #9E9E9E 0%, #D8D8D8 100%);
+  box-shadow: 0px 0px 10px 0px rgba(215, 215, 215, 0.30);
+}
+
+.teamName {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+
+  :global {
+    img {
+      width: 14px;
+      height: 14px;
+      object-fit: contain;
+    }
+  }
+}
+
+.teamBName {
+  align-self: flex-end;
+}

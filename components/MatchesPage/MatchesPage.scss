@@ -1,0 +1,41 @@
+.swiper-landing {
+  /*hardcoded until proper loader implemented*/
+  min-height: 200px;
+  user-select: none;
+  margin-bottom: 40px;
+  @media (max-width: 768px) {
+    min-height: 130px;
+    margin-bottom: 20px;
+  }
+  & .swiper-pagination {
+    position: absolute;
+    max-width: 200px;
+    bottom: 17px !important;
+    left: unset !important;
+    right: 24px !important;
+    text-align: right !important;
+    @media (max-width: 768px) {
+      bottom: 10px !important;
+      right: 20px !important;
+    }
+  }
+
+  & .swiper-pagination-bullet {
+    background-color: #FCFDFB;
+  }
+}
+.swiper-matches {
+  /*hardcoded until proper loader implemented*/
+  min-height: 200px;
+  user-select: none;
+  & .swiper-pagination {
+    position: absolute;
+    max-width: 100%;
+    bottom: 60px !important;
+    text-align: center !important;
+  }
+
+  & .swiper-pagination-bullet {
+    background-color: #FCFDFB;
+  }
+}

@@ -1,0 +1,91 @@
+
+.sidebar_promo_wrapper {
+    width: 100%;
+    min-height: 571px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    user-select: none;
+    position: relative;
+    @media (max-width: 1024px) {
+        min-height: 20vh;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 20px;
+    }
+    .mobileBgWrapper{
+        background: linear-gradient(90deg, rgba(3,11,13,1) 0%, rgba(3,11,13,0.5067873303167421) 86%, rgba(3,11,13,0) 100%);
+    }
+
+    .card_top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        @media (max-width: 1024px) {
+            align-items: flex-start;
+        }
+    }
+    .promoButtons{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 20px;
+        @media (max-width: 1024px) {
+            flex-direction: row;
+        }
+    }
+    .promoTitle {
+        color: var(--White, #fcfdfb);
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        padding: 0 10%;
+        @media (max-width: 1024px) {
+            text-align: left;
+            padding: 0 20% 0 0px;
+            line-height: 1.2em;
+            font-weight: 700;
+        }
+    }
+
+    .promoButton {
+        min-width: 156px;
+        height: 44px;
+        display: flex;
+        padding: 12px 24px;
+        align-items: center;
+        border-radius: 4px;
+        position: relative;
+        transition: .2s ease;
+        font-weight: 600;
+        &:hover {
+            background: #ec943f;
+        }
+    }
+
+    .promoLearnMore {
+        position: relative;
+        transition: .2s ease;
+        display: flex;
+        gap: 8px;
+        :global{
+            img{
+                transition: .2s ease;
+            }
+        }
+        &:hover {
+            opacity: .8;
+            :global{
+                img{
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}

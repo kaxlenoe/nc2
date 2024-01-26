@@ -1,0 +1,33 @@
+@import "@/styles/_breakpoints.scss";
+
+.globalHTML {
+  padding: 0;
+
+  h1, h2, h3, h4, h5, h6, div, p, button, span, a {
+    font-family: var(--font-archivo);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  @media screen and (max-width: $media-tablet) {
+    margin-bottom: 90px;
+  }
+}
+
+.body {
+  padding: 0 20px;
+  @media screen and (max-width: $media-tablet) {
+    padding: 0 16px;
+  }
+}
+
+.main {
+  position: relative;
+  margin-top: 0px;
+  min-height: calc(100vh - 280px);
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
+}

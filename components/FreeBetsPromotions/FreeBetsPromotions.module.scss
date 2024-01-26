@@ -1,0 +1,107 @@
+.title {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: 0.96px;
+}
+
+.description {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  padding-bottom: 24px;
+  padding-top: 24px;
+}
+
+.bonusCard {
+  position: relative;
+  border-radius: 12px;
+  flex-basis: calc(50% - 12px);
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  @media (max-width: 1024px){
+    flex-basis: 100%;
+  }
+}
+.bonusCardBackground{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  border-radius: 12px;
+}
+.bonusCardLogo{
+  :global{
+    img{
+      border-radius: 12px;
+      max-height: 50px;
+    }
+  }
+}
+.bonusCardText{
+  font-size: 24px;
+  font-weight: 600;
+  max-width: 70%;
+  @media (max-width: 1024px){
+    font-size: 20px;
+  }
+}
+
+.bonusCardButtons{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.bonusCardButton{
+  border-radius: 6px;
+  padding: 10px 24px;
+  background: #195685;
+  transition: .2s ease;
+}
+.bonusCardLearnMore{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  &:hover{
+   opacity: .7;
+  }
+}
+.offersFilter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+  margin-top: 6px;
+
+  .filterButton {
+    height: 40px;
+    display: flex;
+    padding: 8px 20px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 12px;
+    background: var(--Hover, #141d1d);
+    justify-content: center;
+    margin-right: 8px;
+    cursor: pointer;
+
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+
+    &.active {
+      border: 1px solid #17bebb;
+    }
+    &:hover {
+      border: 1px solid #17bebb;
+    }
+  }
+}

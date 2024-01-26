@@ -1,0 +1,123 @@
+@import "@/styles/_colors.scss";
+@import "@/styles/_breakpoints.scss";
+
+.wrapper {
+  user-select: none;
+  margin-bottom: 20px;
+  padding: 24px;
+  background: #081517;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  background: var(
+                  --Linear-card,
+                  linear-gradient(131deg, #0f1515 35.95%, #141d1d 95.72%)
+  );
+
+  @media screen and (max-width: $media-tablet) {
+    flex-direction: column;
+    padding: 16px;
+    margin-bottom: 0;
+  }
+}
+
+.teamAColumn,
+.teamBColumn {
+  flex-basis: 50%;
+}
+
+.matchFeed {
+  display: flex;
+  flex-direction: column;
+  background: #192323;
+  border-radius: 12px;
+}
+
+.date {
+  color: var(--Gray, #828282);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.statsRow {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 12px 24px;
+  align-self: stretch;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--Circle, #192323);
+  height: 90px;
+
+  img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .result {
+    color: var(--Gray, #828282);
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 160% */
+  }
+
+  .winner {
+    color: var(--White, #fcfdfb);
+  }
+}
+
+.time {
+  color: var(--Gray, #828282);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.teamName {
+  color: var(--Gray, #828282);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.winner {
+  color: var(--White, #fcfdfb);
+}
+
+.titleCard {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+
+  p {
+    color: var(--White, #fcfdfb);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+}
+
+.titleCardHome {
+}
+
+.titleCardAway {
+  justify-content: flex-end;
+  @media screen and (max-width: $media-tablet) {
+    flex-direction: row-reverse;
+  }
+}

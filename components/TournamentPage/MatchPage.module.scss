@@ -1,0 +1,49 @@
+@import "@/styles/_colors.scss";
+@import "@/styles/_breakpoints.scss";
+
+.breadcrumbs {
+  margin: 40px 0;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  width: 72%;
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: 18px;
+}
+
+.block_title {
+  color: var(--white-1, #eef3f5);
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 20px */
+  display: flex;
+  justify-content: flex-start;
+  margin: 26px 0;
+
+  @media screen and (max-width: $media-sm) {
+    color: var(--white-1, #eef3f5);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 14px */
+  }
+}
+
+.wrapper {
+  width: 792px;
+  height: 88px;
+}

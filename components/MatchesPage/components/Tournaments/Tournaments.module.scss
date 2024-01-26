@@ -1,0 +1,100 @@
+.tournamentsWrapper {
+  display: flex;
+  width: 100%;
+  min-height: 30vh;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 12px;
+  background: var(--Background-card, #0f1515);
+  max-height: 410px;
+}
+
+.tournamentsFeed{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 12px;
+  padding-right: 6px;
+  width: 100%;
+  overflow: auto;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #141d1d;
+    border-radius: 12px;
+    max-width: 4px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #3e4f4f;
+    border-radius: 12px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #465b5b;
+  }
+}
+
+.tournamentsTitle {
+  color: var(--White, #fcfdfb);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+
+.tournamentCard {
+  display: flex;
+  width: 100%;
+  height: 56px;
+  padding: 16px;
+  align-items: center;
+  border-radius: 12px;
+  background: #141d1d;
+  cursor: pointer;
+  position: relative;
+  transition: .2s ease;
+  justify-content: space-between;
+
+  &:hover {
+    background: #212f2f;
+  }
+
+  & > .tournamentName {
+    flex-basis: 50%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+
+  & > .tournamentLogo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    object-fit: cover;
+  }
+
+  & > .esportIcon {
+    width: 16px;
+    height: 16px;
+    flex-basis: 15%;
+    justify-content: center;
+  }
+
+  & > .chevronIcon {
+    width: 12px;
+    height: 12px;
+    object-fit: contain;
+  }
+
+}

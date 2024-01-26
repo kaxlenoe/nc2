@@ -1,0 +1,44 @@
+.breadcrumbs {
+  display: flex;
+  font-weight: 300;
+  color: rgba(252, 253, 251, 0.6);
+  font-size: 14px;
+  margin-bottom: 20px;
+  gap: 4px;
+  user-select: none;
+  @media (max-width: 768px) {
+
+    margin-bottom: 10px;
+  }
+
+  span {
+    padding: 0 4px;
+  }
+}
+
+.separator {
+  user-select: none;
+}
+
+.breadcrumb {
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &:first-child, &:nth-child(3){
+    white-space: normal;
+    overflow: unset;
+    text-overflow: unset
+  }
+
+  &:hover {
+    color: white;
+  }
+}
+
+.currentBreadcrumb {
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

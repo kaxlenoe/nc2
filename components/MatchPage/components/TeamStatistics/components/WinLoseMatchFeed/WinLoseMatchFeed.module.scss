@@ -1,0 +1,99 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  //gap: 16px;
+}
+
+.match_row {
+  user-select: none;
+  position: relative;
+  padding: 16px;
+  border-bottom: 1px solid #283434;
+  transition: all .2s ease;
+
+  &:hover {
+    //background: #1c2828;
+  }
+
+  &:first-child {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom: unset;
+  }
+}
+
+//.match_row:after {
+//  content: '';
+//  display: block;
+//  position: absolute;
+//  width: calc(100% + 32px);
+//  height: 1px;
+//  bottom: -8px;
+//  left: -16px;
+//  background: var(--Border-1, #222c2c);
+//}
+//.match_row:last-child:after {
+//  display: none;
+//}
+
+.date {
+  font-size: 12px;
+  color: #828282;
+  margin-bottom: 12px;
+}
+
+.match_score {
+  display: flex;
+  justify-content: space-between;
+}
+
+.current_team,
+.opponent_team {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-basis: 40%;
+  max-width: 40%;
+  font-weight: 500;
+  color: #828282;
+
+  :global {
+    img {
+      width: 19px;
+      height: 19px;
+      object-fit: contain;
+    }
+
+    div {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.opponent_team {
+  justify-content: flex-end;
+}
+
+.score {
+  color: #828282;
+  font-weight: 500;
+}
+
+.winning_text {
+  color: white;
+  font-weight: 500;
+}
+.no_data{
+  color: #828282;
+  padding: 40px 16px;
+  font-size: 14px;
+  font-weight: 200;
+  letter-spacing: 0.03em;
+}

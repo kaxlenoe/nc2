@@ -1,0 +1,82 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-bottom: 24px;
+}
+
+.winLoseWrapper {
+  display: flex;
+  flex-grow: 1;
+}
+
+.matchesWin {
+  font-size: 14px;
+  flex-grow: 1;
+  text-transform: uppercase;
+}
+
+.matchesLose {
+  font-size: 14px;
+  flex-grow: 1;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.chartWrapper {
+  display: flex;
+  flex-grow: 1;
+}
+
+.chart {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  height: 6px;
+  border-radius: 12px;
+  background: white;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+.chartWin,
+.chartLose {
+  min-width: 2%;
+}
+
+.chartWin {
+  background: linear-gradient(90deg, #149A46 0%, #62D690 100%);
+  box-shadow: 0px 0px 10px 0px rgba(0, 214, 0, 0.30);
+}
+
+.chartLose {
+  background: linear-gradient(90deg, #D47F48 0%, #DA3512 100%);
+  box-shadow: 0px 0px 10px 0px rgba(218, 53, 18, 0.30);
+}
+
+.chartMuted {
+  background: #3B4040;
+}
+.chartMutedWin{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.chartMutedLose{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.percentageWrapper {
+  display: flex;
+  flex-grow: 1;
+}
+
+.percentageWin,
+.percentageLose {
+  flex-grow: 1;
+  font-size: 12px;
+}
+
+.percentageLose {
+  text-align: right;
+}

@@ -1,0 +1,61 @@
+@import "@/styles/_breakpoints.scss";
+
+.wrapper{
+  font-family: "Archivo", sans-serif;
+  min-height: calc(100vh - 480px);
+}
+.content_wrapper{
+  display: flex;
+  gap: 24px;
+  padding-top: 20px;
+  @media screen and (max-width: $media-tablet) {
+    flex-direction: column;
+  }
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.aside{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 384px;
+  min-width: 384px;
+}
+
+.article_img{
+  :global(img){
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+.article_heading_wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.article_date{
+  font-size: 14px;
+}
+.article_heading{
+  font-size: 36px;
+  font-weight: 800;
+}
+.article_content{
+  :global{
+    p{
+      margin-bottom: 24px;
+      color: #828282;
+      strong{
+        color: #bdbdbd;
+      }
+    }
+    h1,h2,h3,h4,h5,h6{
+      margin-bottom: 24px;
+    }
+  }
+}

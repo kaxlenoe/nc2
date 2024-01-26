@@ -1,0 +1,6 @@
+@import '@/styles/_colors.scss';
+@import '@/styles/_breakpoints.scss';
+
+.SelectItem:hover{
+  background-color: $primary-tint3 !important;
+}

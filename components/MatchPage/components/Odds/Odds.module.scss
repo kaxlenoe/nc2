@@ -1,0 +1,186 @@
+@import "@/styles/_breakpoints.scss";
+
+.wrapper {
+  border-radius: 12px;
+  background: var(--Background-card, #0f1515);
+  padding: 24px;
+  @media screen and (max-width: 768px) {
+    padding: 16px;
+  }
+}
+
+.teams {
+  display: flex;
+  gap: 6%;
+  margin-left: 120px;
+  user-select: none;
+  @media screen and (max-width: 768px) {
+    margin-left: 70px;
+  }
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 700;
+
+  :global {
+    p {
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+
+  > img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    @media screen and (max-width: 768px) {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.teamA, .teamB {
+  justify-content: center;
+  flex-basis: calc(45% - 40px);
+
+  @media screen and (max-width: 768px) {
+    flex-basis: calc(45% - 12px);
+  }
+}
+
+.teamA {
+  justify-self: flex-end;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.teamA {
+  @media screen and (max-width: 768px) {
+    justify-content: flex-end;
+  }
+
+  :global {
+    p {
+      @media screen and (max-width: 768px) {
+        text-align: right;
+      }
+    }
+  }
+}
+
+
+.team_separator {
+  font-weight: 700;
+  align-self: center;
+  flex-basis: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.block_title {
+  color: var(--white-1, #eef3f5);
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 20px */
+  display: flex;
+  justify-content: flex-start;
+  margin: 26px 0;
+
+
+  @media screen and (max-width: 768px) {
+    color: var(--white-1, #eef3f5);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 14px */
+    margin: 40px 0;
+  }
+}
+
+.odds_row {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding: 8px;
+  margin-top: 24px;
+  border-radius: 6px;
+
+  &:nth-child(even) {
+    background: #141d1d;
+  }
+
+  :global {
+    .odds {
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-around;
+      margin-left: 28px;
+      padding: 0 15%;
+
+      @media screen and (max-width: $media-tablet) {
+        padding: 0;
+        margin: 0 auto;
+      }
+    }
+    .odds_draw{
+      padding: 0 22%;
+      @media screen and (max-width: $media-tablet) {
+        padding: 0 10%;
+      }
+    }
+  }
+}
+
+.sportbook_logo {
+  flex-basis: 80px;
+  user-select: none;
+  border-radius: 6px;
+  padding: 2px 2px;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    flex-basis: 60px;
+  }
+}
+
+.sportbook_logo_img {
+  object-fit: contain;
+  min-height: 32px;
+}
+
+.odds_value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3B4040;
+  min-width: 60px;
+  text-align: center;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  user-select: none;
+  cursor: pointer;
+  transition: all .2s ease;
+  min-height: 32px;
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+
+  &:hover {
+    background: #4b5050;
+  }
+}
